@@ -1,0 +1,82 @@
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbprojResolveAssemblyReference.cache
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\MainWindow.g.vb
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Application.g.vb
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.exe.config
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.exe
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.pdb
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.xml
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck_MarkupCompile.cache
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck_MarkupCompile.lref
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\MainWindow.baml
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.g.resources
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows_Charm_if_it_Didnt_Suck.Resources.resources
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.GenerateResource.Cache
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.CoreCompileInputs.cache
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.exe
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.xml
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.pdb
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Skin.baml
+C:\Users\Predi\Desktop\WPF - Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Application.baml
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.exe.config
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.exe
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.pdb
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.xml
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbprojResolveAssemblyReference.cache
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Skin.baml
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\MainWindow.g.vb
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Application.g.vb
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck_MarkupCompile.cache
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck_MarkupCompile.lref
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Application.baml
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\MainWindow.baml
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.g.resources
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows_Charm_if_it_Didnt_Suck.Resources.resources
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.GenerateResource.Cache
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.CoreCompileInputs.cache
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.exe
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.xml
+C:\Users\Predi\Desktop\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.pdb
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.exe.config
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.exe
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.pdb
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.xml
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbprojResolveAssemblyReference.cache
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Skin.baml
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\MainWindow.g.vb
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Application.g.vb
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck_MarkupCompile.cache
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck_MarkupCompile.lref
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Application.baml
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\MainWindow.baml
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.g.resources
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows_Charm_if_it_Didnt_Suck.Resources.resources
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.GenerateResource.cache
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.CoreCompileInputs.cache
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.exe
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.xml
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.pdb
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\RestSharp.dll
+C:\Files\Applications\VB Stuff\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.CopyComplete
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.exe.config
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.exe
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.pdb
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\Windows Charm if it Didnt Suck.xml
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\bin\Debug\RestSharp.dll
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbprojResolveAssemblyReference.cache
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Skin.baml
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\MainWindow.g.vb
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Application.g.vb
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck_MarkupCompile.cache
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck_MarkupCompile.lref
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Application.baml
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\MainWindow.baml
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.g.resources
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows_Charm_if_it_Didnt_Suck.Resources.resources
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.GenerateResource.cache
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.CoreCompileInputs.cache
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didn't Suck.vbproj.CopyComplete
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.exe
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.xml
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Windows Charm if it Didnt Suck.pdb
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Widgets\WBrowser.g.vb
+C:\Files\VB.NET\New Files\WCDC\Windows Charm if it Didn't Suck\Windows Charm if it Didn't Suck\obj\Debug\Widgets\WBrowser.baml

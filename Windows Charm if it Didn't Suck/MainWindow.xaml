@@ -1,0 +1,181 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Windows_Charm_if_it_Didnt_Suck"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Name="MainDesign" x:Class="MainWindow"
+    
+        mc:Ignorable="d" AllowsTransparency="True" Height="714.233" Width="671.533" Loaded="Window_Loaded" Closing="Window_Closing" ResizeMode="NoResize" WindowStyle="None" WindowState="Minimized" Icon="WC.ico" ShowInTaskbar="False" Topmost="True" OpacityMask="White" Background="#99343434">
+    <Grid x:Name="All" Margin="0,0,-4,0" Background="{x:Null}">
+        <CheckBox x:Name="StayActive" Content="Stay Active" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom"/>
+        <Grid x:Name="Template_Grid" Margin="388,51,-368,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True" d:IsLocked="True"/>
+        <Label x:Name="TIME" Content="TIME" Margin="10,10,10,0" VerticalAlignment="Top" Height="36" FontSize="24" TextOptions.TextHintingMode="Fixed" HorizontalContentAlignment="Center" Foreground="White" Background="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Disabled" IsHitTestVisible="True" OpacityMask="Black"/>
+        <Grid x:Name="GMain" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
+            <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Height="100" OpacityMask="White" Background="Black" BorderBrush="{x:Null}"/>
+            <Button x:Name="btn_virustotal" Content="Virus Total" Margin="115,10,0,0" VerticalAlignment="Top" Height="100" BorderBrush="{x:Null}" OpacityMask="White" HorizontalAlignment="Left" Width="100"/>
+            <Button x:Name="btn_memo" Content="Memo" Margin="220,10,0,0" VerticalAlignment="Top" Height="100" BorderBrush="{x:Null}" OpacityMask="White" RenderTransformOrigin="0.5,0.543" HorizontalAlignment="Left" Width="100"/>
+            <Button x:Name="btn_networktools" Content="Network Tools" HorizontalAlignment="Left" Margin="325,10,-10,0" VerticalAlignment="Top" Width="100" Height="100" BorderBrush="{x:Null}" OpacityMask="White"/>
+            <Button x:Name="btn_widgets" Content="Widgets" HorizontalAlignment="Left" Margin="430,10,0,0" VerticalAlignment="Top" Width="100" Height="100" BorderBrush="{x:Null}" OpacityMask="White"/>
+            <Button x:Name="btn_settings" Content="Settings" HorizontalAlignment="Left" Margin="535,10,0,0" VerticalAlignment="Top" Width="100" Height="100" BorderBrush="{x:Null}" OpacityMask="White"/>
+        </Grid>
+        <Grid x:Name="GMemo" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
+            <TextBox x:Name="M_Text" Margin="10" AcceptsReturn="True" TextWrapping="Wrap" AcceptsTab="True" SelectionBrush="#FF9E9E9E"/>
+        </Grid>
+        <Grid x:Name="GSearch" Margin="10,46,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Visible" d:IsHidden="True">
+            <TextBox x:Name="S_SearchBar" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E" OpacityMask="White" BorderBrush="{x:Null}" Background="#FF535353"/>
+            <ListView x:Name="S_ListView" ItemsSource="{Binding}" Margin="10,38,10,10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding File}" Width="120"/>
+                        <GridViewColumn Header="Path" DisplayMemberBinding="{Binding Path}" Width="600"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+        </Grid>
+        <Grid x:Name="GNetworkTools" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Visible">
+            <GroupBox Header="DNS to IP Address" Margin="10,98,10,0" Height="97" VerticalAlignment="Top" Opacity=".85">
+                <Grid Margin="0,0,-2,-2">
+                    <TextBox x:Name="NT_DNSDNS" Height="23" Margin="35,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
+                    <TextBox x:Name="NT_DNSIP" Height="23" Margin="67,38,105,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
+                    <Button x:Name="NT_DNSGetIP" Content="Get IP Address" Margin="0,38,10,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="90"/>
+                    <Label Content="DNS:" HorizontalAlignment="Left" Margin="4,12,0,0" VerticalAlignment="Top"/>
+                    <Label Content="IP Address:" HorizontalAlignment="Left" Margin="4,40,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="NT_Info" Header="Information" Margin="10,10,10,0" Height="83" VerticalAlignment="Top" Opacity=".85">
+                <Grid Margin="0,0,-2,1">
+                    <Label x:Name="NT_PublicIP" Content="Public IP Address:" HorizontalAlignment="Left" Margin="10,31,-4,0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.5"/>
+                    <Label x:Name="NT_LocalIP" Content="Local IP Address:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.482,-1.031"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <Grid x:Name="GVirusTotal" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
+            <TextBox x:Name="VT_APIKey" Height="24" Margin="10,26,43,0" TextWrapping="NoWrap"  VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
+            <Label Content="API Key:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="VT_APIHelp" Content="?" Margin="0,26,10,0" VerticalAlignment="Top" Height="24" HorizontalAlignment="Right" Width="28"/>
+            <Button x:Name="VT_Filebtn" Content="..." Margin="0,55,10,0" VerticalAlignment="Top" Height="24" HorizontalAlignment="Right" Width="28"/>
+            <Grid x:Name="VT_G1" HorizontalAlignment="Left" Height="41" Margin="10,100,0,0" VerticalAlignment="Top" Width="135">
+                <RadioButton x:Name="VT_rb1Upload" Content="Upload File" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="VT_rb1ScanAll" Content="Scan All Processes" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top"/>
+            </Grid>
+            <Grid x:Name="VT_G2" HorizontalAlignment="Right" Height="41" Margin="0,100,10,0" VerticalAlignment="Top" Width="144">
+                <RadioButton x:Name="VT_rb2Scan" Content="Upload/Rescan" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="VT_rb2Report" Content="View Report" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top"/>
+            </Grid>
+            <Button x:Name="VT_Start" Content="Start" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="152"/>
+            <Button x:Name="VT_Stop" Content="Stop" HorizontalAlignment="Right" Margin="0,146,10,0" VerticalAlignment="Top" Width="152"/>
+            <ListView x:Name="VT_ListView" ItemsSource="{Binding}" Margin="10,203,11,10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="160"/>
+                        <GridViewColumn Header="Result" DisplayMemberBinding="{Binding Result}" Width="100"/>
+                        <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" Width="150"/>
+                        <GridViewColumn Header="Path" DisplayMemberBinding="{Binding Path}" Width="500"/>
+                        <GridViewColumn Header="Link" DisplayMemberBinding="{Binding Link}" Width="750"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label x:Name="VT_Status" Content="Status: Idle" Margin="10,169,10,0" VerticalAlignment="Top" Height="29"/>
+            <TextBox x:Name="VT_FilePath" IsReadOnly="true" Height="40" Margin="10,55,43,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E" Text="File: "/>
+        </Grid>
+        <Grid x:Name="GSettings" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TabControl Margin="10" IsSynchronizedWithCurrentItem="False" TabStripPlacement="Left" Background="White" Foreground="Black" BorderBrush="Black">
+                <TabItem x:Name="TGeneral" Header="General" Foreground="Black" Margin="-1,0">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FF2E2E2E" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid Background="#FF2E2E2E">
+                        <Label Content="Width:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="SG_Small" Content="Small" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="SG_Medium" Content="Medium" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="SG_Large" Content="Large" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="SG_XLarge" Content="Extra Large" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="TLayout" Header="Layout" Foreground="White">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FF2E2E2E"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid Background="#FF2E2E2E">
+                        <CheckBox x:Name="SL_CoverTaskBar" Content="Cover Windows Taskbar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="Black" Background="#FF040404"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="TSearch" Header="Search" Foreground="White">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FF2E2E2E" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid Background="#FF2E2E2E">
+
+                        <Button x:Name="SS_IndexFolder" Content="Index Folder" Margin="10,31,10,0" VerticalAlignment="Top" Height="18"/>
+                        <ListBox x:Name="SS_IndexedFolders" Height="300" Margin="10,54,10,0" VerticalAlignment="Top"/>
+                        <Button x:Name="SS_RebuildCatalog" Content="Rebuild Catalog" Margin="10,359,10,0" VerticalAlignment="Top" Height="18"/>
+                        <CheckBox x:Name="SS_ClearSearchOnDeactivation" Content="Clear Search On Deactivation" HorizontalAlignment="Left" Margin="10,403,0,0" VerticalAlignment="Top" IsChecked="True" Foreground="White" BorderBrush="Black" Background="Black"/>
+                        <Label Content="Maximum Results Shown:" HorizontalAlignment="Left" Margin="10,424,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="SS_MaxResults" HorizontalAlignment="Left" Height="23" Margin="10,445,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="268"/>
+                        <Label x:Name="SS_Status" Content="Status: Idle" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Indexing some folders may need elevation" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="TExtras" Header="Extras" Foreground="White">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FF2E2E2E"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid Background="#FF2E2E2E">
+                        <CheckBox x:Name="SE_ResetToMainOnDeactivate" Content="Reset To Main Menu On Deactivation" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Open zone size in pixels (y axis):" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Open zone width in pixels (x axis):" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Open zone offset (top right) in pixels (y axis):" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Open Method:" HorizontalAlignment="Left" Margin="12,178,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="SE_DragOpen" Content="Drag Open" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="SE_SlideMouseDown" Content="Slide Mouse Down" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="SE_ysize" Height="23" Margin="10,52,10,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top"/>
+                        <TextBox x:Name="SE_yoffset" Height="23" Margin="10,101,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="70"/>
+                        <TextBox x:Name="SE_xwide" Height="23" Margin="10,150,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="1"/>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="TCredits" Header="Credits" Foreground="White">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FF2E2E2E" Offset="0"/>
+                            <GradientStop Color="#FF171717" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid Background="#FF2E2E2E">
+                        <Label x:Name="SC_lbl1"  HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Height="100" Width="128">
+                            <TextBlock><Run FontWeight="Bold" Text="Code:"/><LineBreak/><Run FontStyle="Italic" Text="_UnderDog"/></TextBlock>
+                        </Label>
+                        <Label x:Name="SC_lbl2" HorizontalAlignment="Left" Margin="115,115,0,0" VerticalAlignment="Top" Height="100" Width="128">
+                            <TextBlock><Run FontWeight="Bold" Text="VirulTotal Code:"/><LineBreak/><Run FontStyle="Italic" Text="omegatechware"/></TextBlock>
+                        </Label>
+                        <Label x:Name="SC_lbl5" HorizontalAlignment="Left" Margin="115,220,0,0" VerticalAlignment="Top" Height="100" Width="128">
+                            <TextBlock><Run FontWeight="Bold" Text="Name: "/><LineBreak/><Run FontStyle="Italic" Text="GenericSkid"/></TextBlock>
+                        </Label>
+                        <Image x:Name="SC_Image_Coder" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="Images/Credits/_UnderDog.png" Cursor="Hand"/>
+                        <Image x:Name="SC_Image_VTCode" HorizontalAlignment="Left" Height="100" Margin="10,115,0,0" VerticalAlignment="Top" Width="100" Source="Images/Credits/Omegatechware.png" Cursor="Hand"/>
+                        <Image x:Name="SC_Image_Name" Height="100" Margin="10,220,0,0" VerticalAlignment="Top" Width="100" Source="Images/Credits/GenericSkid.png" HorizontalAlignment="Left" Cursor="Hand"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+        <Grid x:Name="GWidgets" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
+            <Button x:Name="W_Web_Browser" Content="Web Browser" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Height="100" OpacityMask="White" Background="Black" BorderBrush="{x:Null}"/>
+        </Grid>
+    </Grid>
+</Window>

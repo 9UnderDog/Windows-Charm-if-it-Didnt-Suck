@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Windows_Charm_if_it_Didnt_Suck"
+        xmlns:WPF="clr-namespace:DotNetBrowser.WPF;assembly=DotNetBrowser" x:Class="WBrowser"
+        mc:Ignorable="d"
+        Title="Web Browser" Height="450" Width="800" Foreground="White" Background="#FF343434">
+    <Grid Background="#FF3C3C3C">
+        <TextBox x:Name="WB_UrlBox" Height="23" Margin="10,10,91,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="WB_Refresh" Content="" HorizontalAlignment="Right" Margin="0,10,64,0" VerticalAlignment="Top" Width="22" Height="23" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/Windows Charm if it Didnt Suck;component/Images/Browser/Refresh.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="WB_Back" Content="" HorizontalAlignment="Right" Margin="0,10,37,0" VerticalAlignment="Top" Width="22" Height="23" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/Windows Charm if it Didnt Suck;component/Images/Browser/Back.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="WB_Forward" Content="" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="22" Height="23" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/Windows Charm if it Didnt Suck;component/Images/Browser/Forward.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <WebBrowser x:Name="WB_Browser" Margin="10,38,10,31"/>
+        <Label x:Name="WB_Status" Content="Status: Idle" Margin="10,0,104,10" VerticalAlignment="Bottom"/>
+        <CheckBox x:Name="WB_TopMost" Content="Top Most" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>
