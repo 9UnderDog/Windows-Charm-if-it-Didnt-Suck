@@ -22,7 +22,7 @@
         <Grid x:Name="GMemo" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
             <TextBox x:Name="M_Text" Margin="10" AcceptsReturn="True" TextWrapping="Wrap" AcceptsTab="True" SelectionBrush="#FF9E9E9E"/>
         </Grid>
-        <Grid x:Name="GSearch" Margin="10,46,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Visible">
+        <Grid x:Name="GSearch" Margin="10,46,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Visible" d:IsHidden="True">
             <TextBox x:Name="S_SearchBar" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E" OpacityMask="White" BorderBrush="{x:Null}" Background="#FF535353"/>
             <ListView x:Name="S_ListView" ItemsSource="{Binding}" Margin="10,38,10,10" Background="White">
                 <ListView.View>
@@ -51,7 +51,7 @@
                 </Grid>
             </GroupBox>
         </Grid>
-        <Grid x:Name="GVirusTotal" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
+        <Grid x:Name="GVirusTotal" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible">
             <TextBox x:Name="VT_APIKey" Height="24" Margin="10,26,43,0" TextWrapping="NoWrap"  VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
             <Label Content="API Key:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             <Button x:Name="VT_APIHelp" Content="?" Margin="0,26,10,0" VerticalAlignment="Top" Height="24" HorizontalAlignment="Right" Width="28"/>
@@ -66,7 +66,7 @@
             </Grid>
             <Button x:Name="VT_Start" Content="Start" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="152"/>
             <Button x:Name="VT_Stop" Content="Stop" HorizontalAlignment="Right" Margin="0,146,10,0" VerticalAlignment="Top" Width="152"/>
-            <ListView x:Name="VT_ListView" ItemsSource="{Binding}" Margin="10,203,11,10">
+            <ListView x:Name="VT_ListView" ItemsSource="{Binding}" Margin="10,203,11,10" Foreground="Black" Background="White" BorderThickness="0" BorderBrush="Black">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="160"/>

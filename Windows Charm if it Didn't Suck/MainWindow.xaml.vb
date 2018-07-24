@@ -42,6 +42,8 @@ Public Class MainWindow
     'Taskview
     Dim WS_EX_TOOLWINDOW As Integer = &H80
     Dim GWL_EXSTYLE As Integer = -20
+    'has initialised - for settings mainly
+    Dim Initialised As Boolean = False
     'NotifyIcon
     Private TrayIcon As System.Windows.Forms.NotifyIcon
     'is window already visible
@@ -189,6 +191,10 @@ Public Class MainWindow
         GWidgets.Visibility = Visibility.Hidden
     End Sub
 
+    Private Sub MainDesign_Initialized(sender As Object, e As EventArgs) Handles MainDesign.Initialized
+        Initialised = True
+    End Sub
+
     Private Sub UpdateSearch()
         On Error Resume Next
         Dim WholeCatalog As String = FileSystem.ReadAllText("SearchCatalog.txt")
@@ -256,57 +262,55 @@ UpdateOpenMethod:
 
         Dim xresettime As Integer = 1 'seconds to reset (when sliding down to open)
 
-        Dim msOM As Integer = My.Settings.OpenMethod 'cant use my.settings in all places below for some reason. easy fix
 
-        If msOM = 1 Then
+        If My.Settings.OpenMethod = 1 Then
             Dim Mx As Integer
-            Dim My As Integer
+            Dim my_ As Integer
+            ysize = My.Settings.OPENZONE_ysize 'pixels wide
+            xwide = My.Settings.OPENZONE_xwide 'pixels wide
+            yoffset = My.Settings.OPENZONE_yoffset 'pixels down
             Dim Ftime As DateTime = DateTime.Now
             Dim O1, O2, O3, O4, O5, O6 As Integer
             Do
                 Await Task.Delay(1)
-                If Not msOM = 1 Then GoTo UpdateOpenMethod
+                If My.Settings.OpenMethod = 1 Then Else GoTo UpdateOpenMethod
                 If Ftime.Second <= DateTime.Now.Second Then
                     O1 = 0 : O2 = 0 : O3 = 0 : O4 = 0 : O5 = 0 : O6 = 0
                 End If
                 Mx = Control.MousePosition.X
-                My = Control.MousePosition.Y
-                If O1 = 0 AndAlso My > yoffset And My < ((ysize - yoffset) / 6 + yoffset) AndAlso Mx = (Sx - 1) Then
+                my_ = Control.MousePosition.Y
+                If O1 = 0 AndAlso my_ > yoffset And my_ < ((ysize - yoffset) / 6 + yoffset) AndAlso Mx = (Sx - 1) Then
                     Ftime = DateTime.Now.AddSeconds(xresettime)
                     O1 = 1
-                ElseIf O2 = 0 AndAlso My > ((ysize - yoffset) / 6 + yoffset) And My < ((ysize - yoffset) / 6 * 2 + yoffset) AndAlso Mx = (Sx - 1) Then
+                ElseIf O2 = 0 AndAlso my_ > ((ysize - yoffset) / 6 + yoffset) And my_ < ((ysize - yoffset) / 6 * 2 + yoffset) AndAlso Mx = (Sx - 1) Then
                     O2 = 1
-                ElseIf O3 = 0 AndAlso My > ((ysize - yoffset) / 6 * 2 + yoffset) And My < ((ysize - yoffset) / 6 * 3 + yoffset) AndAlso Mx = (Sx - 1) Then
+                ElseIf O3 = 0 AndAlso my_ > ((ysize - yoffset) / 6 * 2 + yoffset) And my_ < ((ysize - yoffset) / 6 * 3 + yoffset) AndAlso Mx = (Sx - 1) Then
                     O3 = 1
-                ElseIf O4 = 0 AndAlso My > ((ysize - yoffset) / 6 * 3 + yoffset) And My < ((ysize - yoffset) / 6 * 4 + yoffset) AndAlso Mx = (Sx - 1) Then
+                ElseIf O4 = 0 AndAlso my_ > ((ysize - yoffset) / 6 * 3 + yoffset) And my_ < ((ysize - yoffset) / 6 * 4 + yoffset) AndAlso Mx = (Sx - 1) Then
                     O4 = 1
-                ElseIf O5 = 0 AndAlso My > ((ysize - yoffset) / 6 * 4 + yoffset) And My < ((ysize - yoffset) / 6 * 5 + yoffset) AndAlso Mx = (Sx - 1) Then
+                ElseIf O5 = 0 AndAlso my_ > ((ysize - yoffset) / 6 * 4 + yoffset) And my_ < ((ysize - yoffset) / 6 * 5 + yoffset) AndAlso Mx = (Sx - 1) Then
                     O5 = 1
-                ElseIf O6 = O6 AndAlso My > ((ysize - yoffset) / 6 * 5 + yoffset) And My < ((ysize - yoffset) / 6 * 6 + yoffset) AndAlso Mx = (Sx - 1) Then
+                ElseIf O6 = O6 AndAlso my_ > ((ysize - yoffset) / 6 * 5 + yoffset) And my_ < ((ysize - yoffset) / 6 * 6 + yoffset) AndAlso Mx = (Sx - 1) Then
                     O6 = 1
                 ElseIf O1 + O2 + O3 + O4 + O5 + O6 = 6 Then
                     CLib.SlideIn(Me, WidthSetting)
                     O1 = 0 : O2 = 0 : O3 = 0 : O4 = 0 : O5 = 0 : O6 = 0
                 End If
             Loop
-        ElseIf msOM = 2 Then
-            If Not msOM = 2 Then GoTo UpdateOpenMethod
+        ElseIf My.Settings.OpenMethod = 2 Then
             Dim Mx As Integer
-            Dim My As Integer
+            Dim my_ As Integer
             Dim Md As Integer
             Dim Mda As Integer = 0
             Do
                 Await Task.Delay(1)
+                ysize = My.Settings.OPENZONE_ysize 'pixels wide
+                xwide = My.Settings.OPENZONE_xwide 'pixels wide
+                yoffset = My.Settings.OPENZONE_yoffset 'pixels down
                 Mx = Control.MousePosition.X
-                My = Control.MousePosition.Y
-                If Mx < (Sx - xwide) Or My < yoffset Or My > (ysize + yoffset) Then
-                    If Control.MouseButtons.ToString = "Left" Then
-                        Mda = 1
-                    Else
-                        Mda = 0
-                    End If
-                End If
-                If My > yoffset And My < (ysize + yoffset) AndAlso Mx = (Sx - xwide) AndAlso Control.MouseButtons.ToString = "Left" AndAlso Mda = 0 Then
+                my_ = Control.MousePosition.Y
+                If My.Settings.OpenMethod = 2 Then Else GoTo UpdateOpenMethod
+                If my_ > yoffset And my_ < (ysize + yoffset) AndAlso Mx >= (Sx - xwide) AndAlso Control.MouseButtons.ToString = "Left" Then
                     Do While Control.MouseButtons.ToString = "Left"
                         Mx = Control.MousePosition.X + 1
                         If Sx - Mx + 1 >= WidthSetting Then
@@ -512,8 +516,10 @@ UpdateOpenMethod:
 
 #Region "Memo"
     Private Sub M_Text_TextChanged(sender As Object, e As TextChangedEventArgs) Handles M_Text.TextChanged
-        My.Settings.MemoText = CLib.AES_Encrypt(M_Text.Text)
-        My.Settings.Save()
+        If Initialised = True Then
+            My.Settings.MemoText = CLib.AES_Encrypt(M_Text.Text)
+            My.Settings.Save()
+        End If
     End Sub
 #End Region
 
@@ -1069,13 +1075,15 @@ RepeatCheck:
     End Sub
 
     Private Sub SS_MaxResults_TextChanged(sender As Object, e As TextChangedEventArgs) Handles SS_MaxResults.TextChanged
-        Try
-            MaxResultsInt = SS_MaxResults.Text.Replace(" ", "")
-            My.Settings.SS_MaxResult = MaxResultsInt
-            My.Settings.Save()
-        Catch
-            SS_MaxResults.Text = MaxResultsInt
-        End Try
+        If Initialised = True Then
+            Try
+                MaxResultsInt = SS_MaxResults.Text.Replace(" ", "")
+                My.Settings.SS_MaxResult = MaxResultsInt
+                My.Settings.Save()
+            Catch
+                SS_MaxResults.Text = MaxResultsInt
+            End Try
+        End If
     End Sub
 
     Private Sub SS_ClearSearchOnDeactivation_Click(sender As Object, e As RoutedEventArgs) Handles SS_ClearSearchOnDeactivation.Click
@@ -1089,33 +1097,39 @@ RepeatCheck:
     End Sub
 
     Private Sub SE_ysize_TextChanged(sender As Object, e As TextChangedEventArgs) Handles SE_ysize.TextChanged
-        Try
-            ysizeint = SE_ysize.Text.Replace(" ", "")
-            My.Settings.OPENZONE_ysize = ysizeint
-            My.Settings.Save()
-        Catch
-            SE_ysize.Text = ysizeint
-        End Try
+        If Initialised = True Then
+            Try
+                ysizeint = SE_ysize.Text.Replace(" ", "")
+                My.Settings.OPENZONE_ysize = ysizeint
+                My.Settings.Save()
+            Catch
+                SE_ysize.Text = ysizeint
+            End Try
+        End If
     End Sub
 
     Private Sub SE_yoffset_TextChanged(sender As Object, e As TextChangedEventArgs) Handles SE_yoffset.TextChanged
-        Try
-            yoffsetint = SE_yoffset.Text.Replace(" ", "")
-            My.Settings.OPENZONE_yoffset = yoffsetint
-            My.Settings.Save()
-        Catch
-            SE_yoffset.Text = ysizeint
-        End Try
+        If Initialised = True Then
+            Try
+                yoffsetint = SE_yoffset.Text.Replace(" ", "")
+                My.Settings.OPENZONE_yoffset = yoffsetint
+                My.Settings.Save()
+            Catch
+                SE_yoffset.Text = ysizeint
+            End Try
+        End If
     End Sub
 
     Private Sub SE_xwide_TextChanged(sender As Object, e As TextChangedEventArgs) Handles SE_xwide.TextChanged
-        Try
-            xwideint = SE_xwide.Text.Replace(" ", "")
-            My.Settings.OPENZONE_xwide = xwideint
-            My.Settings.Save()
-        Catch
-            SE_xwide.Text = xwideint
-        End Try
+        If Initialised = True Then
+            Try
+                xwideint = SE_xwide.Text.Replace(" ", "")
+                My.Settings.OPENZONE_xwide = xwideint
+                My.Settings.Save()
+            Catch
+                SE_xwide.Text = xwideint
+            End Try
+        End If
     End Sub
 
     Private Sub SE_DragOpen_Click(sender As Object, e As RoutedEventArgs) Handles SE_DragOpen.Click
