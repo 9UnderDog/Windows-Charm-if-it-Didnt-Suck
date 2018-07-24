@@ -22,9 +22,9 @@
         <Grid x:Name="GMemo" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
             <TextBox x:Name="M_Text" Margin="10" AcceptsReturn="True" TextWrapping="Wrap" AcceptsTab="True" SelectionBrush="#FF9E9E9E"/>
         </Grid>
-        <Grid x:Name="GSearch" Margin="10,46,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Visible" d:IsHidden="True">
+        <Grid x:Name="GSearch" Margin="10,46,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Visible">
             <TextBox x:Name="S_SearchBar" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E" OpacityMask="White" BorderBrush="{x:Null}" Background="#FF535353"/>
-            <ListView x:Name="S_ListView" ItemsSource="{Binding}" Margin="10,38,10,10">
+            <ListView x:Name="S_ListView" ItemsSource="{Binding}" Margin="10,38,10,10" Background="White">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding File}" Width="120"/>
@@ -34,7 +34,7 @@
             </ListView>
 
         </Grid>
-        <Grid x:Name="GNetworkTools" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Visible">
+        <Grid x:Name="GNetworkTools" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Visible" d:IsHidden="True">
             <GroupBox Header="DNS to IP Address" Margin="10,98,10,0" Height="97" VerticalAlignment="Top" Opacity=".85">
                 <Grid Margin="0,0,-2,-2">
                     <TextBox x:Name="NT_DNSDNS" Height="23" Margin="35,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
@@ -125,7 +125,7 @@
                         <Button x:Name="SS_RebuildCatalog" Content="Rebuild Catalog" Margin="10,359,10,0" VerticalAlignment="Top" Height="18"/>
                         <CheckBox x:Name="SS_ClearSearchOnDeactivation" Content="Clear Search On Deactivation" HorizontalAlignment="Left" Margin="10,403,0,0" VerticalAlignment="Top" IsChecked="True" Foreground="White" BorderBrush="Black" Background="Black"/>
                         <Label Content="Maximum Results Shown:" HorizontalAlignment="Left" Margin="10,424,0,0" VerticalAlignment="Top"/>
-                        <TextBox x:Name="SS_MaxResults" HorizontalAlignment="Left" Height="23" Margin="10,445,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="268"/>
+                        <TextBox x:Name="SS_MaxResults" HorizontalAlignment="Left" Height="23" Margin="10,445,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="268" SelectionBrush="#FF9E9E9E"/>
                         <Label x:Name="SS_Status" Content="Status: Idle" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top"/>
                         <Label Content="Indexing some folders may need elevation" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                     </Grid>
@@ -145,9 +145,9 @@
                         <Label Content="Open Method:" HorizontalAlignment="Left" Margin="12,178,0,0" VerticalAlignment="Top"/>
                         <RadioButton x:Name="SE_DragOpen" Content="Drag Open" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top"/>
                         <RadioButton x:Name="SE_SlideMouseDown" Content="Slide Mouse Down" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
-                        <TextBox x:Name="SE_ysize" Height="23" Margin="10,52,10,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top"/>
-                        <TextBox x:Name="SE_yoffset" Height="23" Margin="10,101,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="70"/>
-                        <TextBox x:Name="SE_xwide" Height="23" Margin="10,150,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="1"/>
+                        <TextBox x:Name="SE_ysize" Height="23" Margin="10,52,10,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
+                        <TextBox x:Name="SE_yoffset" Height="23" Margin="10,101,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="70" SelectionBrush="#FF9E9E9E"/>
+                        <TextBox x:Name="SE_xwide" Height="23" Margin="10,150,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="1" SelectionBrush="#FF9E9E9E"/>
                     </Grid>
                 </TabItem>
                 <TabItem x:Name="TCredits" Header="Credits" Foreground="White">
