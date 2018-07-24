@@ -302,6 +302,7 @@ UpdateOpenMethod:
             Dim my_ As Integer
             Dim Md As Integer
             Dim Mda As Integer = 0
+            Dim MnD As Boolean = True
             Do
                 Await Task.Delay(1)
                 ysize = My.Settings.OPENZONE_ysize 'pixels wide
@@ -310,7 +311,12 @@ UpdateOpenMethod:
                 Mx = Control.MousePosition.X
                 my_ = Control.MousePosition.Y
                 If My.Settings.OpenMethod = 2 Then Else GoTo UpdateOpenMethod
-                If my_ > yoffset And my_ < (ysize + yoffset) AndAlso Mx >= (Sx - xwide) AndAlso Control.MouseButtons.ToString = "Left" Then
+                If Mx < (Sx - xwide) AndAlso Control.MouseButtons.ToString = "Left" Then
+                    MnD = False
+                ElseIf Control.MouseButtons.ToString = "None" Then
+                    MnD = True
+                End If
+                If my_ > yoffset And my_ < (ysize + yoffset) AndAlso Mx >= (Sx - xwide) AndAlso Control.MouseButtons.ToString = "Left" AndAlso MnD = True Then
                     Do While Control.MouseButtons.ToString = "Left"
                         Mx = Control.MousePosition.X + 1
                         If Sx - Mx + 1 >= WidthSetting Then
