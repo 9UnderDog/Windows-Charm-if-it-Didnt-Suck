@@ -914,12 +914,12 @@ RepeatCheck:
     End Sub
 
     Private Sub Rebuild()
-        Dim Count As Integer
+        Dim Count As Integer = 0
         Dim BulkWrite As String
         My.Computer.FileSystem.WriteAllText("SearchCatalog.txt", "*", False)
         Try
             For i = 0 To SS_IndexedFolders.Items.Count - 1
-                CLib.OnDiffThread(Sub() SS_Status.Content = "Status: Computing Files", Me)
+                CLib.OnDiffThread(Sub() SS_Status.Content = "Status: Computing Files (Found: " & Count & " Already)", Me)
 
 
 
@@ -939,7 +939,7 @@ RepeatCheck:
             CLib.OnDiffThread(Sub() SS_Status.Content = "Status: Finished With " & Count & " Files", Me)
             UpdateSearch()
         Catch ex As Exception
-            CLib.OnDiffThread(Sub() SS_Status.Content = "Status: Error - Elevation Required", Me)
+            CLib.OnDiffThread(Sub() SS_Status.Content = "Error: " & ex.Message, Me)
         End Try
     End Sub
 
@@ -1087,13 +1087,17 @@ RepeatCheck:
     End Sub
 
     Private Sub SS_ClearSearchOnDeactivation_Click(sender As Object, e As RoutedEventArgs) Handles SS_ClearSearchOnDeactivation.Click
-        My.Settings.SS_ClearSearchOnDeactivate = SS_ClearSearchOnDeactivation.IsChecked
-        My.Settings.Save()
+        If Initialised = True Then
+            My.Settings.SS_ClearSearchOnDeactivate = SS_ClearSearchOnDeactivation.IsChecked
+            My.Settings.Save()
+        End If
     End Sub
 
     Private Sub SE_ResetToMainOnDeactivate_Click(sender As Object, e As RoutedEventArgs) Handles SE_ResetToMainOnDeactivate.Click
-        My.Settings.SE_ResetToMainOnDeactivate = SE_ResetToMainOnDeactivate.IsChecked
-        My.Settings.Save()
+        If Initialised = True Then
+            My.Settings.SE_ResetToMainOnDeactivate = SE_ResetToMainOnDeactivate.IsChecked
+            My.Settings.Save()
+        End If
     End Sub
 
     Private Sub SE_ysize_TextChanged(sender As Object, e As TextChangedEventArgs) Handles SE_ysize.TextChanged
