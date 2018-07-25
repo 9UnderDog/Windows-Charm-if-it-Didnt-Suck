@@ -51,7 +51,7 @@
                 </Grid>
             </GroupBox>
         </Grid>
-        <Grid x:Name="GVirusTotal" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+        <Grid x:Name="GVirusTotal" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
             <TextBox x:Name="VT_APIKey" Height="24" Margin="10,26,43,0" TextWrapping="NoWrap"  VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
             <Label Content="API Key:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             <Button x:Name="VT_APIHelp" Content="?" Margin="0,26,10,0" VerticalAlignment="Top" Height="24" HorizontalAlignment="Right" Width="28"/>
@@ -80,7 +80,7 @@
             <Label x:Name="VT_Status" Content="Status: Idle" Margin="10,169,10,0" VerticalAlignment="Top" Height="29"/>
             <TextBox x:Name="VT_FilePath" IsReadOnly="true" Height="40" Margin="10,55,43,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E" Text="File: "/>
         </Grid>
-        <Grid x:Name="GSettings" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible" d:IsHidden="True">
+        <Grid x:Name="GSettings" Margin="10,51,10,31" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Visible">
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -148,6 +148,8 @@
                         <TextBox x:Name="SE_ysize" Height="23" Margin="10,52,10,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
                         <TextBox x:Name="SE_yoffset" Height="23" Margin="10,101,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="70" SelectionBrush="#FF9E9E9E"/>
                         <TextBox x:Name="SE_xwide" Height="23" Margin="10,150,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="1" SelectionBrush="#FF9E9E9E"/>
+                        <Label Content="VirusTotal API wait time" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="SE_VTWaitTime" Height="23" Margin="10,252,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="25" SelectionBrush="#FF9E9E9E"/>
                     </Grid>
                 </TabItem>
                 <TabItem x:Name="TCredits" Header="Credits" Foreground="White">

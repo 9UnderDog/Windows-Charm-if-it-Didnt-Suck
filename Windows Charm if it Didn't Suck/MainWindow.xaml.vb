@@ -179,6 +179,7 @@ Public Class MainWindow
         SE_yoffset.Text = My.Settings.OPENZONE_yoffset
         SE_xwide.Text = My.Settings.OPENZONE_xwide
         SS_ClearSearchOnDeactivation.IsChecked = My.Settings.SS_ClearSearchOnDeactivate
+        SE_VTWaitTime.Text = My.Settings.VT_WaitTime
 
         'hide all grids except main
         GMain.Visibility = Visibility.Visible
@@ -348,8 +349,8 @@ UpdateOpenMethod:
     End Sub
 
     Private Sub Window_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs)
-        'Process.GetCurrentProcess.Kill()
         TrayIcon.Icon.Dispose()
+        Process.GetCurrentProcess.Kill()
     End Sub
 
     Private Async Sub MeasureMouseMovement()
@@ -672,12 +673,13 @@ UpdateOpenMethod:
                 Catch ex As Exception
                     DoNotDeactivate = True
                     MessageBox.Show("Error: " & ex.Message, "Virus Total Scanner", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    DoNotDeactivate = True
+                    DoNotDeactivate = False
                     Exit Sub
                 End Try
                 VT_ListView.Items.Add(VT_DataTable(IO.Path.GetFileName(VTPath), Report.Positives & "/" & Report.Total, Report.Permalink, VTPath, "--"))
             End If
         ElseIf VT_rb1ScanAll.IsChecked = True Then
+            CLib.OnDiffThread(Sub() VT_Status.Content = "Status: Scanning All Processes", Me)
             CLib.NewThread(AddressOf ScanAll)
             VTIsRunning = 1
         End If
@@ -710,7 +712,7 @@ UpdateOpenMethod:
                 Try
                     VTPPath = p.MainModule.FileName
                     mSHA256 = FileHasher.GetSHA256(VTPPath)
-
+                    CLib.OnDiffThread(Sub() VT_Status.Content = "Status: Scanning All Processes - Uploading", Me)
                     mScanner.SubmitFile(VTPPath)
                     CLib.OnDiffThread(Sub() VT_ListView.Items.Add(VT_DataTable(VTPName, "Uploaded", "--", VTPPath, "--")), Me)
                     NumberOfScanned += 1
@@ -719,6 +721,7 @@ UpdateOpenMethod:
                 End Try
 
                 CLib.OnDiffThread(Sub() VTLBItems = VT_ListView.Items.Count, Me)
+                CLib.OnDiffThread(Sub() VT_Status.Content = "Status: Scanning All Processes - Waiting To Get Report", Me)
                 Threading.Thread.Sleep(VTWaitTime)
 
 
@@ -737,11 +740,12 @@ UpdateOpenMethod:
 
 
                 VTVirtualResults.Text += ">>" & VTLBItems & "|H|" & mSHA256 & "|F|" & VTPName & "|D|" & Report.ScanDate & "|P|" & VTPath & "|L|" & Report.Permalink & "|END|" & Environment.NewLine
-
+                CLib.OnDiffThread(Sub() VT_Status.Content = "Status: Scanning All Processes - Waiting To Upload", Me)
                 Threading.Thread.Sleep(VTWaitTime)
             Catch ex As Exception
                 If VTPName = "" Then VTPName = "N/A"
                 CLib.OnDiffThread(Sub() VT_ListView.Items(VTLBItems - 1) = VT_DataTable(VTPName, "Failed: " & ex.Message, "--", VTPPath, mScanner.GetPublicFileScanLink(mSHA256)), Me)
+                CLib.OnDiffThread(Sub() VT_Status.Content = "Status: Scanning All Processes - Waiting Due To Error", Me)
                 Threading.Thread.Sleep(VTWaitTime)
             End Try
 VTFilenameError:
@@ -1150,6 +1154,18 @@ RepeatCheck:
     Private Sub SE_SlideMouseDown_Click(sender As Object, e As RoutedEventArgs) Handles SE_SlideMouseDown.Click
         My.Settings.OpenMethod = 1
         My.Settings.Save()
+    End Sub
+
+    Private Sub SE_VTWaitTime_TextChanged(sender As Object, e As TextChangedEventArgs) Handles SE_VTWaitTime.TextChanged
+        If Initialised = True Then
+            Try
+                VTWaitTime = SE_VTWaitTime.Text.Replace(" ", "")
+                My.Settings.VT_WaitTime = VTWaitTime
+                My.Settings.Save()
+            Catch
+                SE_VTWaitTime.Text = VTWaitTime
+            End Try
+        End If
     End Sub
 #End Region
 
