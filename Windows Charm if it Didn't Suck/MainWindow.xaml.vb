@@ -69,7 +69,7 @@ Public Class MainWindow
     'VirusTotal
     Dim VTPath As String
     Dim VTVirtualResults As New RichTextBox
-    Dim VTWaitTime As Integer = My.Settings.VT_WaitTime * 1000
+    Dim VTWaitTime As Integer = My.Settings.VT_WaitTime
     Dim VTIsRunning As Integer = 0
     Dim VTCancel As Integer = 0
     Private mScanner As VirusTotalScanner
@@ -722,6 +722,7 @@ UpdateOpenMethod:
 
                 CLib.OnDiffThread(Sub() VTLBItems = VT_ListView.Items.Count, Me)
                 CLib.OnDiffThread(Sub() VT_Status.Content = "Status: Scanning All Processes - Waiting To Get Report", Me)
+                VTWaitTime = My.Settings.VT_WaitTime
                 Threading.Thread.Sleep(VTWaitTime)
 
 

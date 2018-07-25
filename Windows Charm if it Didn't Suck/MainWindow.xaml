@@ -148,8 +148,8 @@
                         <TextBox x:Name="SE_ysize" Height="23" Margin="10,52,10,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top" SelectionBrush="#FF9E9E9E"/>
                         <TextBox x:Name="SE_yoffset" Height="23" Margin="10,101,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="70" SelectionBrush="#FF9E9E9E"/>
                         <TextBox x:Name="SE_xwide" Height="23" Margin="10,150,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="1" SelectionBrush="#FF9E9E9E"/>
-                        <Label Content="VirusTotal API wait time" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top"/>
-                        <TextBox x:Name="SE_VTWaitTime" Height="23" Margin="10,252,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="25" SelectionBrush="#FF9E9E9E"/>
+                        <Label Content="VirusTotal API wait time (ms)" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="SE_VTWaitTime" Height="23" Margin="10,252,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="25000" SelectionBrush="#FF9E9E9E"/>
                     </Grid>
                 </TabItem>
                 <TabItem x:Name="TCredits" Header="Credits" Foreground="White">
