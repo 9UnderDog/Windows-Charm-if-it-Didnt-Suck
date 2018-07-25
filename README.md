@@ -10,3 +10,6 @@ After opening you may display the main menu by either:
 
 
 When using the menus left click the time to go back to main menu.
+
+
+(if you have multiple monitors the application may not run)
